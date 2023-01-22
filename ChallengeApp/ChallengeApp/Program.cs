@@ -1,17 +1,70 @@
-﻿var name = "Wojtek";
-var gender = "Meżczyzna";
-var age = 37;
+﻿int number = 5129;
 
-if (age > 40 && gender == "Mężczyzna")
+string numberInString = number.ToString();
+char[] letters = numberInString.ToArray();
+
+List<char> numbers = new List<char>();
+numbers.Add('0');
+numbers.Add('1');
+numbers.Add('2');
+numbers.Add('3');
+numbers.Add('4');
+numbers.Add('5');
+numbers.Add('6');
+numbers.Add('7');
+numbers.Add('8');
+numbers.Add('9');
+
+foreach(var digit in numbers)
 {
-    Console.WriteLine("Mężczyzna powyżej 40 lat");
+    int count = 0;
+    foreach (var letter in letters)
+    { 
+        if(digit == letter)
+        {
+            count++;
+        }
+    
+    }
+    Console.WriteLine(digit + "=>" + count);
 }
-else if (name == "Wojtek" && age == 37)
+
+
+
+
+
+
+
+
+
+// int[] grades = new int[365];
+
+// List<string> daysOfWeeks = new List<string>();
+// daysOfWeeks.Add("poniedziałek");
+// daysOfWeeks.Add("wtorek");
+// daysOfWeeks.Add("środa");
+// daysOfWeeks.Add("czwartek");
+// daysOfWeeks.Add("piątek");
+// daysOfWeeks.Add("sobota");
+// daysOfWeeks.Add("niedziela");
+
+// foreach(var day in daysOfWeeks)
 {
-    Console.WriteLine("Jestem Wojtek i mam 37 lat");
+   // Console.WriteLine(day);
 }
-else if (age == 17)
+
+
+
+
+// for (var i=0; i<daysOfWeeks.Count; i++)
 {
-    Console.WriteLine("Niepełnoletni Mężczyzna");
+   // Console.WriteLine(daysOfWeeks[i]);
 }
+
+
+
+
+
+
+
 
