@@ -1,16 +1,30 @@
-﻿var name = "Wojtek";
-var gender = "Mężczyzna";
-var age = 40;
+﻿int number = 5129;
 
-if (age > 45 && gender == "Mężczyzna")
+string numberInString = number.ToString();
+char[] letters = numberInString.ToArray();
+
+List<char> numbers = new List<char>();
+numbers.Add('0');
+numbers.Add('1');
+numbers.Add('2');
+numbers.Add('3');
+numbers.Add('4');
+numbers.Add('5');
+numbers.Add('6');
+numbers.Add('7');
+numbers.Add('8');
+numbers.Add('9');
+
+foreach (var item in numbers)
 {
-    Console.WriteLine("Mężczyzna powyżej 45 lat");
+    int count = 0;
+    foreach (var letter in letters)
+    {
+        if(item == letter)
+        {
+            count++;
+        }
+    }
+    Console.WriteLine(item + "=>" + count);
 }
-else if (name =="Wojtek" && age == 40)
-{
-    Console.WriteLine("Mam na imię Wojtek i mam 40 lat");
-}
-else if (age < 18)
-{
-    Console.WriteLine("Niepełnoletni Mężczyzna");
-}
+
